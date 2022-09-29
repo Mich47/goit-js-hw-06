@@ -12,3 +12,28 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryList = document.querySelector('.gallery');
+// console.log(galleryList);
+
+const galleryImages = images
+  .map(
+    ({ url, alt }) =>
+      `<li class="item">
+<img class="image" src="${url}" alt="${alt}">
+</li>`
+  )
+  .join('');
+
+console.table(galleryImages);
+
+galleryList.insertAdjacentHTML('afterbegin', galleryImages);
+
+// {/* <link rel="stylesheet" href="css/task-03.css" />; */}
+
+const linkStyles = document.createAttribute('link');
+linkStyles.rel = 'stylesheet';
+linkStyles.href = 'css/task-03.css';
+
+const head = document.querySelector('head').append(linkStyles);
+console.log(head);
