@@ -28,12 +28,3 @@ const galleryImages = images
 console.table(galleryImages);
 
 galleryList.insertAdjacentHTML('afterbegin', galleryImages);
-
-// {/* <link rel="stylesheet" href="css/task-03.css" />; */}
-
-const linkStyles = document.createAttribute('link');
-linkStyles.rel = 'stylesheet';
-linkStyles.href = 'css/task-03.css';
-
-const head = document.querySelector('head').append(linkStyles);
-console.log(head);
