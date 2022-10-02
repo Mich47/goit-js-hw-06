@@ -2,24 +2,11 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
 
 const list = document.querySelector('#ingredients');
 
-//1 =================================
-
-const listArr = [];
-
-ingredients.forEach(item => {
+const listArr = ingredients.map(item => {
   const listItem = document.createElement('li');
   listItem.textContent = item;
-  listItem.setAttribute('class', 'item');
-  listArr.push(listItem);
+  listItem.classList.add('item');
+  return listItem;
 });
 
 list.append(...listArr);
-
-//2 =================================
-
-// ingredients.forEach(item => {
-//   const listItem = document.createElement('li');
-//   listItem.textContent = item;
-//   listItem.setAttribute('class', 'item');
-//   list.append(listItem);
-// });
