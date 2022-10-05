@@ -14,17 +14,14 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
-// console.log(galleryList);
 
 const galleryImages = images
   .map(
     ({ url, alt }) =>
-      `<li class="item">
-<img class="image" src="${url}" alt="${alt}">
+      `<li class="gallery__item">
+<img class="gallery__image" src="${url}" alt="${alt}">
 </li>`
   )
   .join('');
-
-console.table(galleryImages);
 
 galleryList.insertAdjacentHTML('afterbegin', galleryImages);
