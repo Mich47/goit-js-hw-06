@@ -4,7 +4,7 @@ validInput.addEventListener('blur', onValidInputCheck);
 
 function onValidInputCheck(event) {
   const elem = event.target;
-  if (elem.dataset.length <= elem.value.length) {
+  if (Number(elem.dataset.length) === elem.value.length) {
     elem.classList.add('valid');
     elem.classList.remove('invalid');
     return;
@@ -12,3 +12,7 @@ function onValidInputCheck(event) {
   elem.classList.add('invalid');
   elem.classList.remove('valid');
 }
+
+validInput.addEventListener('focus', event => {
+  event.target.style.outline = 'none';
+});
