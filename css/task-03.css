@@ -3,15 +3,25 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.item {
-  max-width: 450px;
+.gallery__item {
+  max-width: 400px;
 }
 
-.image {
+.gallery__image {
   display: block;
   width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery__image:focus,
+.gallery__image:hover {
+  box-shadow: 0px 0px 2px rgb(0 0 0 / 0.12), 0px 0px 8px rgb(0 0 0 / 0.06),
+    0px 0px 12px rgb(0 0 0 / 0.16);
 }
